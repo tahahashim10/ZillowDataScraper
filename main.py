@@ -36,6 +36,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36 Edg/113.0.1774.50',
 }
 
+# To change the listing areas, you need to change the "regionSelection" list and all of its dictioanries inside. Right click on the zillow listing area, view source code, and search up "regionid", then copy and paste that dictionary into the list. Remember that you should only have 5 dictionaries in the list at all times.
 params = {
     'searchQueryState': '{"pagination":{},"mapBounds":{"north":45.08167979796596,"east":-78.35352209516445,"south":42.147535713307256,"west":-81.26489904828945},"regionSelection":[{"regionId":792682,"regionType":6}, {"regionId":792723,"regionType":6}, {"regionId":792711,"regionType":6}, {"regionId":792689,"regionType":6}, {"regionId":792829,"regionType":6}],"isMapVisible":true,"filterState":{"ah":{"value":true},"sort":{"value":"globalrelevanceex"}},"isListVisible":true,"mapZoom":8}',
 }
