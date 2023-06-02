@@ -49,6 +49,7 @@ for i in range(1, 200):
         writer = csv.writer(file)
         writer.writerow(["Address", "Type", "Price", "Features"])
         
+        # Instead of scraping the link itself, this code reverse engineered the requests which the site sends and so you can't change the link in the code.
         response = requests.get(f'https://www.zillow.com/toronto-on/{i}_p/', params=params, cookies=cookies, headers=headers)
 
         from bs4 import BeautifulSoup
