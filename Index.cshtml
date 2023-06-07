@@ -1,0 +1,45 @@
+﻿@model BasicCalculator.Models.Calculator
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Akhny Calculator</h2>
+
+        <form method="post" action="/Calculator/Index">
+            <div class="form-group">
+                <label for="FirstNum">First Number</label>
+                <input type="text" class="form-control" id="FirstNum" name="FirstNum" value="@Model.FirstNum" required />
+            </div>
+
+            <div class="form-group">
+                <label for="SecondNum">Second Number</label>
+                <input type="text" class="form-control" id="SecondNum" name="SecondNum" value="@Model.SecondNum" required />
+            </div>
+
+            <div class="form-group">
+                <label for="TotalNum">Total Number</label>
+                <input type="text" class="form-control" id="TotalNum" name="TotalNum" value="@Model.TotalNum" readonly />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-dark" id="add" value="add" name="calculate">+</button>
+                <button type="submit" class="btn btn-outline-dark" id="min" value="min" name="calculate">-</button>
+                <button type="submit" class="btn btn-outline-dark" id="mul" value="mul" name="calculate">*</button>
+                <button type="submit" class="btn btn-outline-dark" id="div" value="div" name="calculate">/</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
